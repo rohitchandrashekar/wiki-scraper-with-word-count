@@ -163,12 +163,10 @@ async function initScraping() {
         }, {});
         //sorting the object to get the highest count first
         let keysSorted = Object.keys(wordCount)
-          .sort(function(a, b) {
-            return wordCount[b] - wordCount[a];
-          })
-        keysSorted.slice(0,5).forEach(element => {
+          .sort((a, b) => wordCount[b] - wordCount[a]);
+        keysSorted.slice(0,5).forEach(element => 
             console.log(`the word ${element} occurs ${wordCount[element]} times`)
-        });
+        );
       } catch (error) {
     console.error(
       `wikipedia scraper :: error fetching article from wikipedia :: ${error}`
