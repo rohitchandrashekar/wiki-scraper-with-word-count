@@ -5,7 +5,7 @@ steps to run the application
 
  * clone the repository
  * install the dependencies using npm i
- * run the application using node index.js
+ * run the application using npm start
 
 dependencies
 
